@@ -1,2 +1,2 @@
-# yeswiki-extension-quizz
-Create quizz with Bazar
+# yeswiki-extension-quiz
+Create quiz with Bazar
