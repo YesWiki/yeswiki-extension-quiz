@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <header>
+      <meta charset="utf-8"/>
+  </header>
+  <body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'K1BVPSp2bHM',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+        var myArr = player.getAvailableQualityLevels();
+        console.log(myArr);
+      }
+
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(pauseVideo, 3000);
+          done = true;
+        }
+      }
+      function setVideo(nbs) {
+        player.seekTo(nbs, true);
+        player.playVideo();
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+      function pauseVideo() {
+        player.pauseVideo();
+      }
+    </script>
+    <br/>
+     <button onclick="setVideo(1000)">Set Video 1000</button> 
+     <button onclick="setVideo(2000)">Set Video 2000</button> 
+     <button onclick="setVideo(3000)">Set Video 3000</button> 
+     <button onclick="pauseVideo()">Pause Vidéo</button> 
+  </body>
+</html>
+

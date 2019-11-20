@@ -1,0 +1,198 @@
+fieldset
+{
+  background-color:#CCC;
+  padding:16px;	
+  border-block-style: initial;
+  border:2px solid green;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
+}
+
+.btnresponse {
+  border-radius:28px !important;
+}
+
+.imgTitreQuestion{
+    border-radius: 10px;   
+    border: 1px solid #000000;
+    height: 300px;
+    margin: 10px auto 10px;
+    display: block;
+}
+.trim-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+/* The container */
+.contCB {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .contCB input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  .legendfieldset{
+    background-color: #eee;   
+    border: 3px;
+    border-color: darkolivegreen;
+  }
+  /* On mouse-over, add a grey background color */
+  .contCB:hover input ~ .checkmark {
+    background-color: #bbb;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .contCB input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .contCB input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .contCB .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .myCardHeader {
+    background-color: rgb(162, 238, 179);
+    color: rgb(3, 150, 35);
+  }
+
+  .myButtonHeader {
+    background-color: rgb(162, 238, 179);
+    color: rgb(3, 150, 35);
+    width: 100%;
+  }
+
+  .myButtonHeader:hover {
+    background-color: rgb(162, 238, 179);
+    color: rgb(150, 3, 27);
+    width: 100%;
+  }
+
+  .classGagne fieldset{
+    background-color: rgb(162, 238, 179);
+    color: rgb(3, 150, 35);
+  }
+
+  .classPerdu fieldset{
+    background-color: rgb(228, 169, 174);
+    color: rgb(180, 4, 19);
+  }
+  
+  .widthauto {
+    width: auto !important;
+  }
+
+   /* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+  opacity: 1;
+  text-align: center;
+}
+.HeaderCenter {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+
+}
+
+.spanheader{
+  margin-left: 10px;
+}
+
+.mesicones {
+  width: 20px;
+  height: 20px;
+
+}
+.mesicones_d {
+  width: 18px;
+  height: 18px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: rgb(218, 210, 210);
+  color: rgb(241, 14, 14);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 3px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 1.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+
+  top: 135%;
+  left: 50%;
+  margin-left: -60px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(146, 0, 0) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+} 
+
+    
